@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Up Coming - O TIX</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .header {
+            padding: 20px;
+            background-color: #031a31;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff9900;
+            border-radius: 5px;
+        }
+
+        .upcoming-films {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .film-card {
+            background-color: rgba(4, 0, 11, 0.8);
+            padding: 15px;
+            margin: 10px;
+            width: 20%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .film-card:hover {
+            transform: scale(1.05);
+        }
+
+        .film-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .film-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .button {
+            background-color: #ff9900;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .footer {
+            background-color: #031a31;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>O TIX</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Now Playing</a></li>
+                <li><a href="register.html">Login</a></li>
+                <li><a href="kontak.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Daftar Film Up Coming -->
+    <div class="upcoming-films">
+        <div class="film-card">
+            <img src="rano.png" alt="Film 1">
+            <h3>Film 1</h3>
+            <p>Deskripsi singkat tentang Film 1 yang akan datang. Cerita menarik dan penuh aksi.</p>
+            <a href="cs1.html" class="button">Lihat Detail</a>
+        </div>
+        <div class="film-card">
+            <img src="rm.png" alt="Film 2">
+            <h3>Film 2</h3>
+            <p>Deskripsi singkat tentang Film 2 yang akan datang. Sebuah kisah yang menyentuh hati.</p>
+            <a href="cs2.html" class="button">Lihat Detail</a>
+        </div>
+        <div class="film-card">
+            <img src="ps.png" alt="Film 3">
+            <h3>Film 3</h3>
+            <p>Deskripsi singkat tentang Film 3 yang akan datang. Petualangan seru di dunia fantasi.</p>
+            <a href="cs3.html" class="button">Lihat Detail</a>
+        </div>
+        <div class="film-card">
+            <img src="bb.png" alt="Film  4">
+            <h3>Film 4</h3>
+            <p>Deskripsi singkat tentang Film 4 yang akan datang. Kisah penuh misteri dan intrik.</p>
+            <a href="cs4.html" class="button">Lihat Detail</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2023 O TIX. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O TIX - Pemesanan Tiket Bioskop</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        /* Header styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #031a31;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .button {
+            background-color: #ff9900;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .main-content {
+            padding: 0;
+            /* Hapus padding */
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 0;
+            /* Hapus border-radius */
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            /* Tetap 100% */
+            height: 300px;
+            /* Ubah menjadi 300px untuk membuatnya lebih gepeng */
+            margin: 0;
+            /* Hapus margin */
+            overflow: hidden;
+            border-radius: 0;
+            /* Hapus border-radius */
+            box-shadow: none;
+            /* Hapus box-shadow jika ingin lebih sederhana */
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 3px;
+            user-select: none;
+            transform: translateY(-50%);
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Film Section */
+        .films-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .film-card {
+            background-color: rgba(4, 0, 11, 0.8);
+            padding: 15px;
+            margin: 10px;
+            width: 20%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .film-card:hover {
+            transform: scale(1.05);
+        }
+
+        .film-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .film-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        
+        .schedule-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(4, 0, 11, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .schedule-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #fff;
+        }
+
+        th {
+            background-color: #031a31;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #031a31;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>O TIX</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Now Playing</a></li>
+                <li><a href="comingsoon.html">Up Coming</a></li>
+                <li><a href="kontak.html"></a>Contact</li>
+                <li><a href="register.html" class="button">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="jared-murray-nuQH89C211c-unsplash.jpg" alt="Film 2">
+            </div>
+            <div class="mySlides fade">
+                <img src="merch-husey-EEZgog4AS5M-unsplash.jpg" alt="Film 3">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <div class="films-section">
+        <div class="film-card">
+            <img src="ng.png" alt="Naga Bonar">
+            <h3>Naga Bonar</h3>
+            <p>Drama.</p>
+            <a href="dtf1.html" class="button">Detail Film</a>
+        </div>
+        <div class="film-card">
+            <img src="pb.png" alt="Pengantin Baru">
+            <h3>Pengantin Baru</h3>
+            <p>Komedi.</p>
+            <a href="dtf2.html" class="button">Detail Film</a>
+        </div>
+        <div class="film-card">
+            <img src="rr.png" alt="Ramadhan Romana">
+            <h3>Ramadhan Romana</h3>
+            <p>Romantis.</p>
+            <a href="dtf3.html" class="button">Detail Film</a>
+        </div>
+        <div class="film-card">
+            <img src="sidoel.jpg" alt="Si Doel">
+            <h3>Si Doel</h3>
+            <p>Drama Keluarga</p>
+            <a href="dtf4.html" class="button">Detail Film</a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2023 O TIX. All rights reserved.</p>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function plusSlides(n) {
+            slideIndex += n;
+            if (slideIndex > document.getElementsByClassName("mySlides").length) { slideIndex = 1 }
+            if (slideIndex < 1) { slideIndex = document.getElementsByClassName("mySlides").length }
+            showSlidesManually();
+        }
+
+        function showSlidesManually() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+
+<div class="schedule-section" id="schedule">
+    <h2>Jadwal Film</h2>
+    <table>
+        <tr>
+            <th>Waktu</th>
+            <th>Film</th>
+            <th>Jenis</th>
+        </tr>
+        <tr>
+            <td>10:00 - 12:00</td>
+            <td>Naga Bonar</td>
+            <td>Drama</td>
+        </tr>
+        <tr>
+            <td>12:30 - 14:30</td>
+            <td>Pengantin Baru</td>
+            <td>Komedi</td>
+        </tr>
+        <tr>
+            <td>15:00 - 17:00</td>
+            <td>Ramadhan Romana</td>
+            <td>Romantis</td>
+        </tr>
+        <tr>
+            <td>17:30 - 19:30</td>
+            <td>Si Doel</td>
+            <td>Drama Keluarga</td>
+        </tr>
+    </table>
+</div>
+</div>
+
+
+</html>
